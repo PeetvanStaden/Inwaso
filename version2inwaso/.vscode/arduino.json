@@ -1,0 +1,6 @@
+{
+    "board": "industrialshields:avr:mduinodali",
+    "configuration": "cpu=mduino58plusdali",
+    "sketch": "version2inwaso.ino",
+    "port": "COM4"
+}
