@@ -435,14 +435,14 @@ void interlock::testINT28(uint16_t* raptorholdingReg,int* _outputcontrol)
       // _outputcontrol[XV011ctrl]=0; 
       // _outputcontrol[XV019ctrl]=0; 
     
-      raptorholdingReg[PC004CTRL] = 0;
+      //raptorholdingReg[PC004CTRL] = 0;
       _outputcontrol[PC004]=0;
-      //modbus.prit("Interlock 28 ACTIVATED PC004 SHOULD STOP\n");
+      modbus.prit("Interlock 28 ACTIVATED PC004 SHOULD STOP\n");
 
   }
   else
   {
-    if(!bitRead(raptorholdingReg[LevelSwitchesReg],LSHH009))
+    //if(!bitRead(raptorholdingReg[LevelSwitchesReg],LSHH009))
     bitWrite(raptorholdingReg[InterlockB],INT28,0);
   }
 }
@@ -466,13 +466,29 @@ void interlock::testINT29(uint16_t* raptorholdingReg,int* _outputcontrol)
     
     if(raptorholdingReg[PC004CTRL] >1)
     {
+      
       //bitWrite(raptorholdingReg[ValveControl],XV011ctrl,1);
       if(!bitRead(raptorholdingReg[ValveControl],XV009ctrl)||!bitRead(raptorholdingReg[ValveControl],XV010ctrl)||!bitRead(raptorholdingReg[ValveControl],XV011ctrl)||!bitRead(raptorholdingReg[ValveControl],XV019ctrl))
       {
         bitWrite(raptorholdingReg[ValveControl],XV011ctrl,1);
       }
-      _outputcontrol[PC004]=1;
+      _outputcontrol[PC004]=raptorholdingReg[PC004CTRL]; 
       modbus.prit("Interlock 29 ACTIVATED PC004 SHOULD START");
+    }
+    else
+    {
+        bitWrite(raptorholdingReg[InterlockB],INT29,1);
+        _outputcontrol[XV002ctrl] = 0;
+        _outputcontrol[XV003ctrl] = 0;
+        _outputcontrol[XV004ctrl] = 0;
+        _outputcontrol[XV009ctrl] = 0;
+        _outputcontrol[XV010ctrl] = 0;
+        _outputcontrol[XV011ctrl] = 0;
+        _outputcontrol[XV017ctrl] = 0;
+        _outputcontrol[XV019ctrl] = 0;
+        _outputcontrol[PC001]     = 0;
+        _outputcontrol[PC002]     = 0;      
+
     }
     
   }
