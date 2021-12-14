@@ -76,11 +76,11 @@ void loop() {
   #endif
   if(interrupt== true)
   {
-    Serial.print("Valve status before update: ");
-    Serial.println(holdingRegisters[24]);
-    Raptorslave.update();
-    Serial.print("Valve status after update: ");
-    Serial.println(holdingRegisters[24]);
+    //Serial.print("Valve status before update: ");
+    //Serial.println(holdingRegisters[24]);
+    //Raptorslave.update();
+    //Serial.print("Valve status after update: ");
+    //Serial.println(holdingRegisters[24]);
     interrupt = false;
     if(millis()-ft01frprv>20000)
     {

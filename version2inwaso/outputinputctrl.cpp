@@ -308,6 +308,12 @@ void outputinputctrl::updateHardwareInputs(uint16_t* holdingReg)
     {
       //slope = -0.18
       // intercept = 110.89
+      if(analogInputPins[i][1]== TT002)
+      {
+        Serial.println();
+        Serial.print("Temperature for TT002: ");
+        Serial.println(analogsensor);
+      }
       for(int x = 0; x<81;x++)
       {
         if(analogsensor>tempDEC[x])
