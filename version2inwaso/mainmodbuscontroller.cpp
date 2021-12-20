@@ -43,7 +43,8 @@ bool mainmodbuscontroller::raptorSync(uint16_t* _raptorholdingReg,int* _outputct
 
 for(int i = 0; i < 15; i ++)
 {
-
+  prit("\n");
+  prit("Valve command from raptor: ")
   _outputctrl[i] = bitRead(_raptorholdingReg[ValveControl],i);
   if(_outputctrl[i]==1)
   {
@@ -56,7 +57,7 @@ for(int i = 0; i < 15; i ++)
 
 
 }
-prit("\n");
+prit("........\n");
 //extras control
 // for(int i = 0; i < 11; i ++)
 // {
