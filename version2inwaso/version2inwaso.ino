@@ -51,6 +51,7 @@ void setup() {
   Raptorslave.update(); 
   sr.prit("Raptor not breaking\n");
   holdingRegisters[Startup] = 1;
+  holdingRegisters[Startupfeedback]=0;
   lock.startup(holdingRegisters,NUM_HOLDING_REGISTERS,OutputCtrl,OutputStatus);
   sr.prit("Lock startup did not break \n");
   attachInterrupt(digitalPinToInterrupt(I0_5),FT001counter,RISING);

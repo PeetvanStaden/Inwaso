@@ -225,6 +225,7 @@
 #define VS2RES                198
 #define SU1RES                199
 #define Startup               50
+#define Startupfeedback       51
 
 #define TotalThresholdVariables   23
 #define TotalThresholdSensors     37
