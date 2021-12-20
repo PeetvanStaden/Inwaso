@@ -427,7 +427,7 @@ if(raptorholdingReg[AT005ABC]>raptorholdingReg[AT005ABC+HAlarmOffset])
 }
 void interlock::testINT28(uint16_t* raptorholdingReg,int* _outputcontrol)
 {
-  if(!bitRead(raptorholdingReg[LevelSwitchesReg],LSLL008))
+  if(bitRead(raptorholdingReg[LevelSwitchesReg],LSLL008))
   {
     bitWrite(raptorholdingReg[InterlockB],INT28,1);
     bitWrite(raptorholdingReg[InterlockB],INT29,0);
@@ -478,6 +478,7 @@ void interlock::testINT29(uint16_t* raptorholdingReg,int* _outputcontrol)
     }
     else
     {
+        modbus.prit("Interlock 29 ACTIVATED PC004 wont start, valves will close");
         bitWrite(raptorholdingReg[InterlockB],INT29,1);
         _outputcontrol[XV002ctrl] = 0;
         _outputcontrol[XV003ctrl] = 0;
