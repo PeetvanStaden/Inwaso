@@ -17,6 +17,10 @@ void interlock::startup(uint16_t* raptorholdingReg,int sizeofHoldReg,int* _outpu
     Serial.println("Raptor sync failed");
     
   }
+  else
+  {
+    raptorholdingReg[Startup]=0;
+  }
   modbus.prit("Starting modbussync \n");
   modbus.modbusSync(raptorholdingReg); 
   modbus.prit("Ending mosbuss sync");
