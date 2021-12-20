@@ -192,7 +192,7 @@ void loop() {
 //      process.process2vs1();
 //    process.process2su1();
     now=millis()+delayprint;
-    //holdingRegisters[Startup] = 1;
+    holdingRegisters[Startup] = 1;
     //Serial.println("Exiting interlock check");
   }
 }
