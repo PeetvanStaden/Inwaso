@@ -427,7 +427,7 @@ if(raptorholdingReg[AT005ABC]>raptorholdingReg[AT005ABC+HAlarmOffset])
 }
 void interlock::testINT28(uint16_t* raptorholdingReg,int* _outputcontrol)
 {
-  if(bitRead(raptorholdingReg[LevelSwitchesReg],LSLL008))
+  if(!bitRead(raptorholdingReg[LevelSwitchesReg],LSLL008))
   {
     bitWrite(raptorholdingReg[InterlockB],INT28,1);
     bitWrite(raptorholdingReg[InterlockB],INT29,0);
