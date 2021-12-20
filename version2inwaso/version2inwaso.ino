@@ -53,6 +53,7 @@ void setup() {
   holdingRegisters[Startup] = 1;
     lock.startup(holdingRegisters,NUM_HOLDING_REGISTERS,OutputCtrl,OutputStatus);
   sr.prit("Lock startup did not break \n");
+  holdingRegisters[Startup] = 0;
   attachInterrupt(digitalPinToInterrupt(I0_5),FT001counter,RISING);
   attachInterrupt(digitalPinToInterrupt(I0_6),FT002counter,RISING);
   attachInterrupt(digitalPinToInterrupt(I1_5),FT003counter,RISING);
