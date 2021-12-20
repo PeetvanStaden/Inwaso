@@ -50,7 +50,7 @@ void setup() {
   Raptorslave.setHoldingRegisters(holdingRegisters,NUM_HOLDING_REGISTERS);
   Raptorslave.update(); 
   sr.prit("Raptor not breaking\n");
-  holdingRegisters[Startup] = 1;
+  holdingRegisters[Startup] = 0;
   holdingRegisters[Startupfeedback]=0;
   lock.startup(holdingRegisters,NUM_HOLDING_REGISTERS,OutputCtrl,OutputStatus);
   sr.prit("Lock startup did not break \n");
@@ -75,6 +75,7 @@ void loop() {
   #ifdef WATCHDOG
   wdt_reset();
   #endif
+  holdingRegisters[Startup] = 1;
   if(interrupt== true)
   {
     //Serial.print("Valve status before update: ");
