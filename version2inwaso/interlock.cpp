@@ -28,7 +28,8 @@ void interlock::startup(uint16_t* raptorholdingReg,int sizeofHoldReg,int* _outpu
 }
 int interlock::CheckInterlocks(uint16_t* raptorholdingReg,int* _outputcontrol,int* _outputstatus)
 {
-
+  modbus.prit("\n");
+  modbus.prit("Enetring checkinterlocks method\n");
   //TODO:raptorsync
   bool returnvalue=false;
   float now = millis()+1000;   

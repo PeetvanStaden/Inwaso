@@ -152,12 +152,12 @@ void loop() {
     // Serial.println(holdingRegisters[PT006]);
     // Serial.print("PT-007:  ");
     // Serial.println(holdingRegisters[PT007]); 
-     Serial.print("TT-001:  ");
+/*      Serial.print("TT-001:  ");
      Serial.println(holdingRegisters[TT001]);
      Serial.print("TT002:  ");
      Serial.println(holdingRegisters[TT002]);
      Serial.print("TT003:  ");
-     Serial.println(holdingRegisters[TT003]);
+     Serial.println(holdingRegisters[TT003]); */
     if(holdingRegisters[PC001Speed]!=prev1)
     {
       Serial.print("PC-001 Frequency:  ");
@@ -179,7 +179,7 @@ void loop() {
   }
   if(millis()>now)
   {
-    Serial.print("Checking interlocks");
+    //Serial.print("Checking interlocks");
     lock.CheckInterlocks(holdingRegisters,OutputCtrl,OutputStatus);
     Raptorslave.update();
 //    process.process1();
