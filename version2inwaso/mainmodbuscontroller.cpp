@@ -388,11 +388,12 @@ bool mainmodbuscontroller::ReadVFD3(uint16_t* holdingReg)
         }
         else
         {
-          //Serial.print("Response from VFD3: ");
+          Serial.println();
+          Serial.print("Response from VFD3: ");
           
           uint16_t in = response.getRegister(0);
           holdingReg[PC004Speed]=in;
-          //Serial.println(in);    
+          Serial.println(in);    
           _readvfd3 = false;
           return true;
         }
