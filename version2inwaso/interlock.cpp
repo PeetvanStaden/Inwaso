@@ -36,9 +36,11 @@ int interlock::CheckInterlocks(uint16_t* raptorholdingReg,int* _outputcontrol,in
       }
      raptor = millis()+10;
     }
-  
+modbus.modbusSync(raptorholdingReg); 
 if(raptorholdingReg[Startup]==0)
 {
+  modbus.prit("\n");
+  modbus.prit("Starting interlocks\n");
   testLT001(raptorholdingReg,_outputcontrol);
   testINT1(raptorholdingReg,_outputcontrol);
   testINT1(raptorholdingReg,_outputcontrol);
