@@ -75,7 +75,7 @@ void loop() {
   #ifdef WATCHDOG
   wdt_reset();
   #endif
-  holdingRegisters[Startup] = 1;
+  
   if(interrupt== true)
   {
     //Serial.print("Valve status before update: ");
@@ -192,7 +192,8 @@ void loop() {
 //      process.process2vs1();
 //    process.process2su1();
     now=millis()+delayprint;
-    Serial.println("Exiting interlock check");
+    holdingRegisters[Startup] = 1;
+    //Serial.println("Exiting interlock check");
   }
 }
 
