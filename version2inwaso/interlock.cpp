@@ -71,7 +71,13 @@ if(raptorholdingReg[Startupfeedback]==1)
   testINT33(raptorholdingReg,_outputcontrol);
   testLT013(raptorholdingReg,_outputcontrol);
   
-}  
+} 
+else
+{
+  modbus.prit("\n");
+  Serial.print("Failed raptorfeedback value: ");
+  Serial.println(raptorholdingReg[Startupfeedback]);
+} 
   //
   outputs.updateHardwareOutputs(_outputcontrol);
   modbus.modbusSync(raptorholdingReg); 
