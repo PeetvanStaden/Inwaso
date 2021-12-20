@@ -45,7 +45,7 @@ bool outputinputctrl::SetXV001(int Value)
   //correct
   digitalWrite(Q0_0,Value);
   delay(300);
-   modbus.prit("changing valve 1!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!zzzzzzzzzzzzzzzzzzzzz \n");
+  // modbus.prit("changing valve 1!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!zzzzzzzzzzzzzzzzzzzzz \n");
   return true;
 }
 bool outputinputctrl::SetXV002(int Value)

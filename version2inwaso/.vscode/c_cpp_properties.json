@@ -25,7 +25,7 @@
         },
         {
             "name": "Arduino",
-            "compilerPath": "C:\\Users\\peetv\\AppData\\Local\\Arduino15\\packages\\industrialshields\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5\\bin\\avr-g++",
+            "compilerPath": "C:\\Users\\PeetvanStaden\\AppData\\Local\\Arduino15\\packages\\industrialshields\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5\\bin\\avr-g++",
             "compilerArgs": [
                 "-w",
                 "-std=gnu++11",
@@ -37,19 +37,19 @@
             ],
             "intelliSenseMode": "gcc-x64",
             "includePath": [
-                "C:\\Users\\peetv\\AppData\\Local\\Arduino15\\packages\\industrialshields\\hardware\\avr\\1.1.33\\cores\\industrialshields",
-                "C:\\Users\\peetv\\AppData\\Local\\Arduino15\\packages\\industrialshields\\hardware\\avr\\1.1.33\\variants\\mduinoplus",
-                "C:\\Users\\peetv\\AppData\\Local\\Arduino15\\packages\\industrialshields\\hardware\\avr\\1.1.33\\libraries\\EEPROM\\src",
-                "H:\\Documents\\Arduino\\libraries\\arduino-Tools40-master\\src",
-                "C:\\Users\\peetv\\AppData\\Local\\Arduino15\\packages\\industrialshields\\hardware\\avr\\1.1.33\\libraries\\RS485\\src",
-                "C:\\Users\\peetv\\AppData\\Local\\Arduino15\\packages\\industrialshields\\hardware\\avr\\1.1.33\\libraries\\Ethernet\\src",
-                "C:\\Users\\peetv\\AppData\\Local\\Arduino15\\packages\\industrialshields\\hardware\\avr\\1.1.33\\libraries\\SPI\\src",
-                "c:\\users\\peetv\\appdata\\local\\arduino15\\packages\\industrialshields\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5\\lib\\gcc\\avr\\7.3.0\\include",
-                "c:\\users\\peetv\\appdata\\local\\arduino15\\packages\\industrialshields\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5\\lib\\gcc\\avr\\7.3.0\\include-fixed",
-                "c:\\users\\peetv\\appdata\\local\\arduino15\\packages\\industrialshields\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5\\avr\\include"
+                "C:\\Users\\PeetvanStaden\\AppData\\Local\\Arduino15\\packages\\industrialshields\\hardware\\avr\\1.1.31\\cores\\industrialshields",
+                "C:\\Users\\PeetvanStaden\\AppData\\Local\\Arduino15\\packages\\industrialshields\\hardware\\avr\\1.1.31\\variants\\mduinoplus",
+                "C:\\Users\\PeetvanStaden\\AppData\\Local\\Arduino15\\packages\\industrialshields\\hardware\\avr\\1.1.31\\libraries\\EEPROM\\src",
+                "C:\\Users\\PeetvanStaden\\Documents\\Arduino\\libraries\\arduino-Tools40-master\\src",
+                "C:\\Users\\PeetvanStaden\\AppData\\Local\\Arduino15\\packages\\industrialshields\\hardware\\avr\\1.1.31\\libraries\\RS485\\src",
+                "C:\\Users\\PeetvanStaden\\AppData\\Local\\Arduino15\\packages\\industrialshields\\hardware\\avr\\1.1.31\\libraries\\Ethernet\\src",
+                "C:\\Users\\PeetvanStaden\\AppData\\Local\\Arduino15\\packages\\industrialshields\\hardware\\avr\\1.1.31\\libraries\\SPI\\src",
+                "c:\\users\\peetvanstaden\\appdata\\local\\arduino15\\packages\\industrialshields\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5\\lib\\gcc\\avr\\7.3.0\\include",
+                "c:\\users\\peetvanstaden\\appdata\\local\\arduino15\\packages\\industrialshields\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5\\lib\\gcc\\avr\\7.3.0\\include-fixed",
+                "c:\\users\\peetvanstaden\\appdata\\local\\arduino15\\packages\\industrialshields\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5\\avr\\include"
             ],
             "forcedInclude": [
-                "C:\\Users\\peetv\\AppData\\Local\\Arduino15\\packages\\industrialshields\\hardware\\avr\\1.1.33\\cores\\industrialshields\\Arduino.h"
+                "C:\\Users\\PeetvanStaden\\AppData\\Local\\Arduino15\\packages\\industrialshields\\hardware\\avr\\1.1.31\\cores\\industrialshields\\Arduino.h"
             ],
             "cStandard": "c11",
             "cppStandard": "c++11",

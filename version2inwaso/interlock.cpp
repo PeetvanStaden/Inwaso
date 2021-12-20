@@ -36,6 +36,7 @@ int interlock::CheckInterlocks(uint16_t* raptorholdingReg,int* _outputcontrol,in
       }
      raptor = millis()+10;
     }
+modbus.modbusSync(raptorholdingReg);   
 if(raptorholdingReg[Startup]==0)
 {
   testLT001(raptorholdingReg,_outputcontrol);
@@ -66,7 +67,7 @@ if(raptorholdingReg[Startup]==0)
 }  
   //
   outputs.updateHardwareOutputs(_outputcontrol);
-  modbus.modbusSync(raptorholdingReg);
+  
   outputs.updateHardwareInputs(raptorholdingReg);
 
   return returnvalue;
