@@ -19,7 +19,7 @@ void interlock::startup(uint16_t* raptorholdingReg,int sizeofHoldReg,int* _outpu
   }
   else
   {
-    raptorholdingReg[Startup]=0;
+    //raptorholdingReg[Startup]=0;
   }
   modbus.prit("Starting modbussync \n");
   modbus.modbusSync(raptorholdingReg); 
@@ -41,7 +41,7 @@ int interlock::CheckInterlocks(uint16_t* raptorholdingReg,int* _outputcontrol,in
      raptor = millis()+10;
     }
 modbus.modbusSync(raptorholdingReg); 
-if(raptorholdingReg[Startup]==0)
+if(raptorholdingReg[Startup]==1)
 {
   modbus.prit("\n");
   modbus.prit("Starting interlocks\n");
