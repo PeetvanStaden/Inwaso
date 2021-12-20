@@ -129,7 +129,7 @@ _outputctrl[PC005] = 0;
 
 
 
-if(!bitRead(_raptorholdingReg[LevelSwitchesReg],LSLL008))
+if(bitRead(_raptorholdingReg[LevelSwitchesReg],LSLL008))
 {
   _outputctrl[PC004]=_raptorholdingReg[PC004CTRL];
   Serial.print("Pump 4 can be controlled:   ");
