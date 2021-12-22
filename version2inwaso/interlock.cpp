@@ -55,7 +55,7 @@ else
   Serial.print("Failed raptorfeedback value: ");
   Serial.println(raptorholdingReg[Startupfeedback]);
 } 
-  //
+//  //
   outputs.updateHardwareOutputs(_outputcontrol);
   modbus.modbusSync(raptorholdingReg); 
   outputs.updateHardwareInputs(raptorholdingReg);

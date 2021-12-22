@@ -1539,19 +1539,7 @@ if(raptorholdingReg[AT005ABC]>raptorholdingReg[AT005ABC+HAlarmOffset])
 }
 void mainmodbuscontroller::testINT28(uint16_t* raptorholdingReg,int* _outputcontrol)
 {
-  if(bitRead(_raptorholdingReg[LevelSwitchesReg],LSLL008))
-  {
-    _outputctrl[PC004]=_raptorholdingReg[PC004CTRL];
-    Serial.print("Pump 4 can be controlled:   ");
-    Serial.println(_outputctrl[PC004]);
-    //prit("PC004 = 0 \n");
-  }
-  else
-  {
-    //prit("PC004 2= ");
-    //Serial.println("Pump 4 off due to a level switch");
-    //_outputctrl[PC004]=0;
-  }
+
   if(!bitRead(raptorholdingReg[LevelSwitchesReg],LSLL008))
   {
     bitWrite(raptorholdingReg[InterlockB],INT28,1);
@@ -1571,9 +1559,9 @@ void mainmodbuscontroller::testINT28(uint16_t* raptorholdingReg,int* _outputcont
   {
     //if(!bitRead(raptorholdingReg[LevelSwitchesReg],LSHH009))
     bitWrite(raptorholdingReg[InterlockB],INT28,0);
-    _outputctrl[PC004]=_raptorholdingReg[PC004CTRL];
+    _outputcontrol[PC004]=raptorholdingReg[PC004CTRL];
     Serial.print("Pump 4 can be controlled:   ");
-    Serial.println(_outputctrl[PC004]);
+    Serial.println(_outputcontrol[PC004]);
   }
 }
 void mainmodbuscontroller::testINT29(uint16_t* raptorholdingReg,int* _outputcontrol)
