@@ -38,7 +38,7 @@ bool mainmodbuscontroller::raptorStart(uint16_t* _raptorholdingReg,int _sizeofHo
  * Check for update thresholds
  * Update Thresholds
  */
-bool mainmodbuscontroller::raptorSync(uint16_t* _raptorholdingReg,int* _outputctrl,int* _outputsatus)
+bool mainmodbuscontroller::raptorSync(uint16_t _raptorholdingReg[],int _outputctrl[],int _outputsatus[])
 {
 
 for(int i = 0; i < 15; i ++)
@@ -171,10 +171,7 @@ else
   _outputctrl[PC004]=0;
 }*/
 
- modbusSync(_raptorholdingReg); 
- updateHardwareOutputs(_outputctrl);
- modbusSync(_raptorholdingReg); 
- updateHardwareInputs(_raptorholdingReg);
+
   return true;
 }
 

@@ -5,7 +5,7 @@
 
 #include <ModbusRTUMaster.h> 
 #include <RS485.h>
-#include "outputinputctrl.h"
+
 
 
 
@@ -40,11 +40,12 @@ class mainmodbuscontroller
       bool SpeedVFD2(int speedset);
       bool SpeedVFD3(int speedset);
 
-      bool raptorSync(uint16_t* _raptorholdingReg,int* _outputctrl,int* _outputsatus);
+      bool raptorSync(uint16_t _raptorholdingReg[],int _outputctrl[],int _outputsatus[]);
       int convert(int rows,int col,int rowpointer,int colpointer);
       void prit(char* input);
   private:
-    outputinputctrl outputs;
+    
+    
     int WhosTurn=0;
     void UpdateSlavemA(uint16_t *Buffer,uint16_t* holdingReg);
     void UpdateSlaveInputs(uint16_t *Buffer,uint16_t* holdingReg); 

@@ -41,7 +41,7 @@ int interlock::CheckInterlocks(uint16_t* raptorholdingReg,int* _outputcontrol,in
       }
      raptor = millis()+10;
     }
-//modbus.modbusSync(raptorholdingReg); 
+modbus.modbusSync(raptorholdingReg); 
 /*if(raptorholdingReg[Startup]==1)
 {
   modbus.prit("\n");
@@ -56,9 +56,9 @@ else
   Serial.println(raptorholdingReg[Startupfeedback]);
 } */
 //  //
-  //outputs.updateHardwareOutputs(_outputcontrol);
-  //modbus.modbusSync(raptorholdingReg); 
-  //outputs.updateHardwareInputs(raptorholdingReg);
+  outputs.updateHardwareOutputs(_outputcontrol);
+  modbus.modbusSync(raptorholdingReg); 
+  outputs.updateHardwareInputs(raptorholdingReg);
 
   return returnvalue;
 }
