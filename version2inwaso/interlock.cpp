@@ -46,30 +46,7 @@ if(raptorholdingReg[Startup]==1)
 {
   modbus.prit("\n");
   modbus.prit("Starting interlocks\n");
-  testLT001(raptorholdingReg,_outputcontrol);
-  testINT1(raptorholdingReg,_outputcontrol);
-  testINT1(raptorholdingReg,_outputcontrol);
-  testINT2(raptorholdingReg,_outputcontrol);
-  testAT001(raptorholdingReg,_outputcontrol);
-  testINT36(raptorholdingReg,_outputcontrol);
-  testINT3(raptorholdingReg,_outputcontrol);
-  testINT4(raptorholdingReg,_outputcontrol);
-  testINT7(raptorholdingReg,_outputcontrol);
-  testINT8(raptorholdingReg,_outputcontrol);
-  testINT26(raptorholdingReg,_outputcontrol);
-  testINT27(raptorholdingReg,_outputcontrol);
-  testINT28(raptorholdingReg,_outputcontrol);
-  testINT29(raptorholdingReg,_outputcontrol);
-  testLT016(raptorholdingReg,_outputcontrol);
-  testAT006(raptorholdingReg,_outputcontrol);
-  testINT34(raptorholdingReg,_outputcontrol);
-  testINT35(raptorholdingReg,_outputcontrol);
-  testLT010(raptorholdingReg,_outputcontrol);
-  testINT30(raptorholdingReg,_outputcontrol);
-  testINT31(raptorholdingReg,_outputcontrol);
-  testINT32(raptorholdingReg,_outputcontrol);
-  testINT33(raptorholdingReg,_outputcontrol);
-  testLT013(raptorholdingReg,_outputcontrol);
+
   
 } 
 else
@@ -86,7 +63,7 @@ else
   return returnvalue;
 }
 
-void interlock::testLT001(uint16_t* raptorholdingReg,int* _outputcontrol)
+/* void interlock::testLT001(uint16_t* raptorholdingReg,int* _outputcontrol)
 {
   if(raptorholdingReg[LT001]>raptorholdingReg[LT001+HAlarmOffset] && raptorholdingReg[LT001]<raptorholdingReg[LT001+HHAlarmOffset] )
     {
@@ -799,5 +776,5 @@ void interlock::testLT013(uint16_t* raptorholdingReg,int* _outputcontrol)
       }  
       
     }
-}
+} */
    
