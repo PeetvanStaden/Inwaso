@@ -37,6 +37,8 @@ int interlock::CheckInterlocks(uint16_t* raptorholdingReg,int* _outputcontrol,in
     {if(modbus.raptorSync(raptorholdingReg,_outputcontrol,_outputstatus)==true)
     {
       returnvalue= 1;
+      Serial.print("SetPC004 to speed in Raptorsync: ");
+      Serial.println(_outputcontrol[26],DEC);
      // Serial.println("Raptor syinc success");
       }
      raptor = millis()+10;
@@ -56,7 +58,11 @@ else
   Serial.println(raptorholdingReg[Startupfeedback]);
 } */
 //  //
+  Serial.print("SetPC004 to speed in Bfore output: ");
+  Serial.println(_outputcontrol[26],DEC);
   outputs.updateHardwareOutputs(_outputcontrol);
+  Serial.print("SetPC004 to speed in after output: ");
+  Serial.println(_outputcontrol[26],DEC);
   modbus.modbusSync(raptorholdingReg); 
   outputs.updateHardwareInputs(raptorholdingReg);
 
