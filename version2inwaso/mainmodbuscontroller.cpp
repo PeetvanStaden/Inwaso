@@ -1270,7 +1270,7 @@ void mainmodbuscontroller::testINT1(uint16_t* raptorholdingReg,int* _outputcontr
     _outputcontrol[XV013ctrl]=0; 
     _outputcontrol[XV016ctrl]=0; 
     _outputcontrol[XV018ctrl]=0; 
-    prit("INTERLOCK: INT1 active"); 
+    prit("INTERLOCK: INT1 active \n"); 
   }
   else
   {
@@ -1286,7 +1286,7 @@ void mainmodbuscontroller::testINT2(uint16_t* raptorholdingReg,int* _outputcontr
     _outputcontrol[XV002ctrl]=0;
     _outputcontrol[PC001]= 0;
     raptorholdingReg[PC001CTRL] = 0;
-   prit("INTERLOCK: INT2 active");    
+   prit("INTERLOCK: INT2 active \n");    
   }
   else
   {
@@ -1324,7 +1324,7 @@ void mainmodbuscontroller::testINT36(uint16_t* raptorholdingReg,int* _outputcont
         bitWrite(raptorholdingReg[ExtrasControl],VER001ctrl,0);
         bitWrite(raptorholdingReg[ExtrasControl],VER002ctrl,0);
         bitWrite(raptorholdingReg[InterlockB],INT36,1);  
-        prit("INTERLOCK: INT36 active");    
+        prit("INTERLOCK: INT36 active \n");    
 
       }
       else
@@ -1334,7 +1334,7 @@ void mainmodbuscontroller::testINT36(uint16_t* raptorholdingReg,int* _outputcont
         bitWrite(raptorholdingReg[ExtrasControl],VER001ctrl,0);
         bitWrite(raptorholdingReg[ExtrasControl],VER002ctrl,0);     
         bitWrite(raptorholdingReg[InterlockB],INT36,1);
-        prit("INTERLOCK: INT36 active"); 
+        prit("INTERLOCK: INT36 active \n"); 
       }    
     }
     else
@@ -1347,7 +1347,7 @@ void mainmodbuscontroller::testINT3(uint16_t* raptorholdingReg,int* _outputcontr
   if(!bitRead(raptorholdingReg[LevelSwitchesReg],LSLL004))
   {
     bitWrite(raptorholdingReg[InterlockA],INT3,1);
-    prit("INTERLOCK: INT3 active"); 
+    prit("INTERLOCK: INT3 active \n"); 
     bitWrite(raptorholdingReg[ExtrasControl],VER001ctrl,0);
     _outputcontrol[PC006] = 0;     
   }
@@ -1361,7 +1361,7 @@ void mainmodbuscontroller::testINT4(uint16_t* raptorholdingReg,int* _outputcontr
   if(!bitRead(raptorholdingReg[LevelSwitchesReg],LSLL005))
   {
     bitWrite(raptorholdingReg[InterlockA],INT4,1);
-    prit("INTERLOCK: INT4 active");
+    prit("INTERLOCK: INT4 active \n");
     bitWrite(raptorholdingReg[ExtrasControl],VER002ctrl,0);
     _outputcontrol[PC007] = 0;     
   }
@@ -1396,7 +1396,7 @@ void mainmodbuscontroller::testINT7(uint16_t* raptorholdingReg,int* _outputcontr
         bitWrite(raptorholdingReg[AlarmHH2],TT002-16,1);
         bitWrite(raptorholdingReg[ExtrasControl],VER001ctrl,0);
         bitWrite(raptorholdingReg[InterlockA],INT7,1);
-        prit("INTERLOCK: INT7 active"); 
+        prit("INTERLOCK: INT7 active \n"); 
       }
       else
       {
@@ -1404,7 +1404,7 @@ void mainmodbuscontroller::testINT7(uint16_t* raptorholdingReg,int* _outputcontr
         bitWrite(raptorholdingReg[AlarmHH1],TT002,1);
         bitWrite(raptorholdingReg[ExtrasControl],VER001ctrl,0);
         bitWrite(raptorholdingReg[InterlockA],INT7,1);   
-        prit("INTERLOCK: INT7 active");   
+        prit("INTERLOCK: INT7 active \n");   
      
       }    
     }
@@ -1439,7 +1439,7 @@ void mainmodbuscontroller::testINT8(uint16_t* raptorholdingReg,int* _outputcontr
         bitWrite(raptorholdingReg[AlarmHH2],TT003-16,1);
         bitWrite(raptorholdingReg[ExtrasControl],VER002ctrl,0);
         bitWrite(raptorholdingReg[InterlockA],INT8,1); 
-        prit("INTERLOCK: INT8 active"); 
+        prit("INTERLOCK: INT8 active \n"); 
       }
       else
       {
@@ -1447,7 +1447,7 @@ void mainmodbuscontroller::testINT8(uint16_t* raptorholdingReg,int* _outputcontr
         bitWrite(raptorholdingReg[AlarmHH1],TT003,1);
         bitWrite(raptorholdingReg[ExtrasControl],VER002ctrl,0);   
         bitWrite(raptorholdingReg[InterlockA],INT8,1);  
-        prit("INTERLOCK: INT8 active"); 
+        prit("INTERLOCK: INT8 active \n"); 
      
       }    
     }
@@ -1467,7 +1467,7 @@ if(raptorholdingReg[AT004ABC]>raptorholdingReg[AT004ABC+HAlarmOffset])
         bitWrite(raptorholdingReg[ExtrasControl],VER002ctrl,0);
         bitWrite(raptorholdingReg[ExtrasControl],VER001ctrl,0);
         bitWrite(raptorholdingReg[InterlockB],INT26,1); 
-        prit("INTERLOCK: INT26 active"); 
+        prit("INTERLOCK: INT26 active \n"); 
         for(int i = 0; i<26; i++)
         {
           _outputcontrol[i]=0;
@@ -1482,7 +1482,7 @@ if(raptorholdingReg[AT004ABC]>raptorholdingReg[AT004ABC+HAlarmOffset])
         bitWrite(raptorholdingReg[ExtrasControl],VER002ctrl,0);
         bitWrite(raptorholdingReg[ExtrasControl],VER001ctrl,0);
         bitWrite(raptorholdingReg[InterlockB],INT26,1); 
-        prit("INTERLOCK: INT26 active"); 
+        prit("INTERLOCK: INT26 active \n"); 
         for(int i = 0; i<26; i++)
         {
           _outputcontrol[i]=0;
@@ -1508,7 +1508,7 @@ if(raptorholdingReg[AT005ABC]>raptorholdingReg[AT005ABC+HAlarmOffset])
         bitWrite(raptorholdingReg[ExtrasControl],VER002ctrl,0);
         bitWrite(raptorholdingReg[ExtrasControl],VER001ctrl,0);
         bitWrite(raptorholdingReg[InterlockB],INT27,1); 
-        prit("INTERLOCK: INT27 active"); 
+        prit("INTERLOCK: INT27 active \n"); 
         for(int i = 0; i<26; i++)
         {
           _outputcontrol[i]=0;
@@ -1523,7 +1523,7 @@ if(raptorholdingReg[AT005ABC]>raptorholdingReg[AT005ABC+HAlarmOffset])
         bitWrite(raptorholdingReg[ExtrasControl],VER002ctrl,0);
         bitWrite(raptorholdingReg[ExtrasControl],VER001ctrl,0);
         bitWrite(raptorholdingReg[InterlockB],INT27,1); 
-        prit("INTERLOCK: INT27 active"); 
+        prit("INTERLOCK: INT27 active \n"); 
         for(int i = 0; i<26; i++)
         {
           _outputcontrol[i]=0;
@@ -1542,7 +1542,7 @@ void mainmodbuscontroller::testINT28(uint16_t* raptorholdingReg,int* _outputcont
   if(!bitRead(raptorholdingReg[LevelSwitchesReg],LSLL008))
   {
     bitWrite(raptorholdingReg[InterlockB],INT28,1);
-    prit("INTERLOCK: INT28 active"); 
+    prit("INTERLOCK: INT28 active \n"); 
     bitWrite(raptorholdingReg[InterlockB],INT29,0);
       // _outputcontrol[XV009ctrl]=0;
       // _outputcontrol[XV010ctrl]=0; 
@@ -1565,7 +1565,7 @@ void mainmodbuscontroller::testINT29(uint16_t* raptorholdingReg,int* _outputcont
   if(!bitRead(raptorholdingReg[LevelSwitchesReg],LSHH009))
   {
     bitWrite(raptorholdingReg[InterlockB],INT29,1);
-    prit("INTERLOCK: INT29 active");
+    prit("INTERLOCK: INT29 active \n");
     bitWrite(raptorholdingReg[InterlockB],INT28,0);
     //bitWrite(raptorholdingReg[ExtrasControl],VER002ctrl,0);
     // _outputcontrol[PC001] = 0; 
@@ -1626,7 +1626,7 @@ void mainmodbuscontroller::testINT34(uint16_t* raptorholdingReg,int* _outputcont
   if(!bitRead(raptorholdingReg[LevelSwitchesReg],LSLL017))
   {
     bitWrite(raptorholdingReg[InterlockB],INT34,1);
-    prit("INTERLOCK: INT34 active");
+    prit("INTERLOCK: INT34 active \n");
     //bitWrite(raptorholdingReg[ExtrasControl],VER002ctrl,0);
     _outputcontrol[XV012ctrl] = 0;     
     _outputcontrol[XV013ctrl] = 0;
@@ -1642,7 +1642,7 @@ void mainmodbuscontroller::testINT35(uint16_t* raptorholdingReg,int* _outputcont
   if(!bitRead(raptorholdingReg[LevelSwitchesReg],LSHH019))
   {
     bitWrite(raptorholdingReg[InterlockB],INT35,1);
-    prit("INTERLOCK: INT35 active");
+    prit("INTERLOCK: INT35 active \n");
     bitWrite(raptorholdingReg[ExtrasControl],VER002ctrl,0);
     bitWrite(raptorholdingReg[ExtrasControl],VER001ctrl,0);
     _outputcontrol[PC001] = 0; 
@@ -1764,7 +1764,7 @@ void mainmodbuscontroller::testINT30(uint16_t* raptorholdingReg,int* _outputcont
   if(!bitRead(raptorholdingReg[LevelSwitchesReg],LSHH011))
   {
     bitWrite(raptorholdingReg[InterlockB],INT30,1);
-    prit("INTERLOCK: INT30 active");
+    prit("INTERLOCK: INT30 active \n");
     //bitWrite(raptorholdingReg[ExtrasControl],VER002ctrl,0);
     _outputcontrol[XV010ctrl] = 0;     
   }
@@ -1778,7 +1778,7 @@ void mainmodbuscontroller::testINT31(uint16_t* raptorholdingReg,int* _outputcont
   if(!bitRead(raptorholdingReg[LevelSwitchesReg],LSLL012))
   {
     bitWrite(raptorholdingReg[InterlockB],INT31,1);
-    prit("INTERLOCK: INT31 active");
+    prit("INTERLOCK: INT31 active \n");
     //bitWrite(raptorholdingReg[ExtrasControl],VER002ctrl,0);
     raptorholdingReg[PC002CTRL] = 0;
     _outputcontrol[PC002] = 0;
@@ -1796,7 +1796,7 @@ void mainmodbuscontroller::testINT32(uint16_t* raptorholdingReg,int* _outputcont
   if(!bitRead(raptorholdingReg[LevelSwitchesReg],LSHH014))
   {
     bitWrite(raptorholdingReg[InterlockB],INT32,1);
-    prit("INTERLOCK: INT32 active");
+    prit("INTERLOCK: INT32 active \n");
     //bitWrite(raptorholdingReg[ExtrasControl],VER002ctrl,0);
     _outputcontrol[XV009ctrl] = 0;
     _outputcontrol[XV014ctrl] = 0;
@@ -1810,7 +1810,7 @@ void mainmodbuscontroller::testINT33(uint16_t* raptorholdingReg,int* _outputcont
 {
   if(!bitRead(raptorholdingReg[LevelSwitchesReg],LSLL015))
   {
-    prit("INTERLOCK: INT33 active");
+    prit("INTERLOCK: INT33 active \n");
     bitWrite(raptorholdingReg[InterlockB],INT33,1);
     //bitWrite(raptorholdingReg[ExtrasControl],VER002ctrl,0);
     bitWrite(raptorholdingReg[ExtrasControl],PC003ctrl,0);

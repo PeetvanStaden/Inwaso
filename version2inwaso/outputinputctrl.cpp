@@ -179,8 +179,8 @@ void outputinputctrl::SetPC002(int Value)
 void outputinputctrl::SetPC004(int Value)
 {
   VFDSpeed[2]=Value;
-  //Serial.println("SetPC004 to speed:");
-  //Serial.println(Value,DEC);
+  Serial.println("SetPC004 to speed:");
+  Serial.println(Value,DEC);
 }
 void outputinputctrl::SetMU001(int Value)
 {
