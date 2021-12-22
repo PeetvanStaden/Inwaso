@@ -5,6 +5,7 @@
 
 #include <ModbusRTUMaster.h> 
 #include <RS485.h>
+#include "outputinputctrl.h"
 
 
 
@@ -43,7 +44,7 @@ class mainmodbuscontroller
       int convert(int rows,int col,int rowpointer,int colpointer);
       void prit(char* input);
   private:
-    
+    outputinputctrl outputs;
     int WhosTurn=0;
     void UpdateSlavemA(uint16_t *Buffer,uint16_t* holdingReg);
     void UpdateSlaveInputs(uint16_t *Buffer,uint16_t* holdingReg); 
