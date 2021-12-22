@@ -418,6 +418,8 @@ int outputinputctrl::updateHardwareStatus(int OutputStatus[])
 }
 int outputinputctrl::updateHardwareOutputs(int OutputCtrl[])
 {
+  Serial.println();
+  Serial.println("Updating hardware outputs");
   int ValveErrorValue=0;
   if(!SetXV001(OutputCtrl[XV001ctrl]))
   {

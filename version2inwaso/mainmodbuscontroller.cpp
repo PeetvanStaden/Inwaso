@@ -171,7 +171,10 @@ else
   _outputctrl[PC004]=0;
 }*/
 
- 
+ modbusSync(_raptorholdingReg); 
+ updateHardwareOutputs(_outputctrl);
+ modbusSync(_raptorholdingReg); 
+ updateHardwareInputs(_raptorholdingReg);
   return true;
 }
 

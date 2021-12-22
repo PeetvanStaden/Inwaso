@@ -56,9 +56,9 @@ else
   Serial.println(raptorholdingReg[Startupfeedback]);
 } */
 //  //
-  outputs.updateHardwareOutputs(_outputcontrol);
-  modbus.modbusSync(raptorholdingReg); 
- // outputs.updateHardwareInputs(raptorholdingReg);
+  //outputs.updateHardwareOutputs(_outputcontrol);
+  //modbus.modbusSync(raptorholdingReg); 
+  //outputs.updateHardwareInputs(raptorholdingReg);
 
   return returnvalue;
 }
