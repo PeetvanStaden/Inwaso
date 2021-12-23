@@ -201,7 +201,7 @@ bool mainmodbuscontroller::modbusSync(uint16_t holdingReg[])
     x++;
     delay(50);
   }
-  Serial.println(holdingReg(PC001Speed));
+  Serial.println(holdingReg[PC001Speed]);
   x=0;
   //prit("Reading VFD2 \n");
   while(!ReadVFD2(holdingReg)&&x<10)
@@ -210,7 +210,7 @@ bool mainmodbuscontroller::modbusSync(uint16_t holdingReg[])
     x++;
     delay(50);
   }
-  Serial.println(holdingReg(PC002Speed));
+  Serial.println(holdingReg[PC002Speed]);
   x=0;
   //prit("Reading VFD3 \n");
   while(!ReadVFD3(holdingReg)&&x<10)
@@ -219,7 +219,7 @@ bool mainmodbuscontroller::modbusSync(uint16_t holdingReg[])
     x++;
     delay(50);
   }
-  Serial.println(holdingReg(PC004Speed));
+  Serial.println(holdingReg[PC004Speed]);
   return true;
 
 }
