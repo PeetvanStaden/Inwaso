@@ -1347,7 +1347,7 @@ void mainmodbuscontroller::testINT36(uint16_t* raptorholdingReg,int* _outputcont
 }
 void mainmodbuscontroller::testINT3(uint16_t* raptorholdingReg,int* _outputcontrol)
 {
-  if(!bitRead(raptorholdingReg[LevelSwitchesReg],LSLL004))
+  if(bitRead(raptorholdingReg[LevelSwitchesReg],LSLL004))
   {
     bitWrite(raptorholdingReg[InterlockA],INT3,1);
     prit("INTERLOCK: INT3 active \n"); 
@@ -1362,7 +1362,7 @@ void mainmodbuscontroller::testINT3(uint16_t* raptorholdingReg,int* _outputcontr
 }
 void mainmodbuscontroller::testINT4(uint16_t* raptorholdingReg,int* _outputcontrol)
 {
-  if(!bitRead(raptorholdingReg[LevelSwitchesReg],LSLL005))
+  if(bitRead(raptorholdingReg[LevelSwitchesReg],LSLL005))
   {
     bitWrite(raptorholdingReg[InterlockA],INT4,1);
     prit("INTERLOCK: INT4 active \n");
