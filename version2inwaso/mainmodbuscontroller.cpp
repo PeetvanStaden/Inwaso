@@ -1290,6 +1290,7 @@ void mainmodbuscontroller::testINT2(uint16_t* raptorholdingReg,int* _outputcontr
   }
   else
   {
+    _outputcontrol[PC001]=raptorholdingReg[PC001CTRL];
     bitWrite(raptorholdingReg[InterlockA],INT2,0);
   }
 }
@@ -1354,6 +1355,7 @@ void mainmodbuscontroller::testINT3(uint16_t* raptorholdingReg,int* _outputcontr
   else
   {
     bitWrite(raptorholdingReg[InterlockA],INT3,0);
+    _outputcontrol[PC006] = bitRead(raptorholdingReg[ExtrasControl],PC006ctrl);
   }
 }
 void mainmodbuscontroller::testINT4(uint16_t* raptorholdingReg,int* _outputcontrol)
@@ -1367,6 +1369,7 @@ void mainmodbuscontroller::testINT4(uint16_t* raptorholdingReg,int* _outputcontr
   }
   else
   {
+    _outputcontrol[PC007] = bitRead(raptorholdingReg[ExtrasControl],PC007ctrl);
     bitWrite(raptorholdingReg[InterlockA],INT4,0);
   }
 }
@@ -1639,6 +1642,7 @@ void mainmodbuscontroller::testINT34(uint16_t* raptorholdingReg,int* _outputcont
   else
   {
     bitWrite(raptorholdingReg[InterlockB],INT34,0);
+    _outputcontrol[PC005] = bitRead(raptorholdingReg[ExtrasControl],PC005ctrl);
   }
 }
 void mainmodbuscontroller::testINT35(uint16_t* raptorholdingReg,int* _outputcontrol)
@@ -1792,6 +1796,7 @@ void mainmodbuscontroller::testINT31(uint16_t* raptorholdingReg,int* _outputcont
   }
   else
   {
+    _outputcontrol[PC002]=raptorholdingReg[PC002CTRL];
     bitWrite(raptorholdingReg[InterlockB],INT31,0);
   }
 }
@@ -1824,6 +1829,7 @@ void mainmodbuscontroller::testINT33(uint16_t* raptorholdingReg,int* _outputcont
   }
   else
   {
+    _outputcontrol[PC003] = bitRead(raptorholdingReg[ExtrasControl],PC003ctrl);
     bitWrite(raptorholdingReg[InterlockB],INT33,0);
   }
 }
