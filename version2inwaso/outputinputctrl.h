@@ -17,7 +17,7 @@ class outputinputctrl
   public:
    // interlock();//char **sensorarray);
    void sensorToOutput(uint16_t* holdingReg);
-   void updateHardwareInputs(uint16_t* holdingReg); 
+   void updateHardwareInputs(uint16_t holdingReg[]); 
    int updateHardwareOutputs(int OutputCtrl[]);
    int updateHardwareStatus(int OutputStatus[]);
   private:

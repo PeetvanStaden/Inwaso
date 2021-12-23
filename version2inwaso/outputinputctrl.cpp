@@ -271,7 +271,7 @@ void outputinputctrl::sensorToOutput(uint16_t* holdingReg)
 //  }
     
 }
-void outputinputctrl::updateHardwareInputs(uint16_t* holdingReg)
+void outputinputctrl::updateHardwareInputs(uint16_t holdingReg[])
 {
   // Serial.print(" in hardwareinputs update sync:");
   // Serial.println(holdingReg[ValveStatus],BIN);
@@ -295,10 +295,6 @@ void outputinputctrl::updateHardwareInputs(uint16_t* holdingReg)
     if(!(digitalInputsPins[i][1]>=TotalSensors))
     {
       bool input=digitalRead(digitalInputsPins[SwitchPins[i]][0]);
-      if(digitalInputsPins[i][1]==LSLL005||digitalInputsPins[i][1]==LSLL004)
-      {
-        input = !input;
-      }
       bitWrite(holdingReg[LevelSwitchesReg],digitalInputsPins[SwitchPins[i]][1],input);
       
     }
