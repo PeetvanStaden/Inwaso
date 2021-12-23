@@ -194,14 +194,14 @@ bool mainmodbuscontroller::modbusSync(uint16_t holdingReg[])
     delay(50);
   }
   x=0;
- prit("Reading VFD1 \n");
+ //prit("Reading VFD1 \n");
   while(!ReadVFD1(holdingReg)&&x<10)
   {
     //prit("f1");
     x++;
     delay(50);
   }
-  Serial.println(holdingReg[PC001Speed]);
+  //Serial.println(holdingReg[PC001Speed]);
   x=0;
   //prit("Reading VFD2 \n");
   while(!ReadVFD2(holdingReg)&&x<10)
@@ -210,7 +210,7 @@ bool mainmodbuscontroller::modbusSync(uint16_t holdingReg[])
     x++;
     delay(50);
   }
-  Serial.println(holdingReg[PC002Speed]);
+ // Serial.println(holdingReg[PC002Speed]);
   x=0;
   //prit("Reading VFD3 \n");
   while(!ReadVFD3(holdingReg)&&x<10)
@@ -219,7 +219,7 @@ bool mainmodbuscontroller::modbusSync(uint16_t holdingReg[])
     x++;
     delay(50);
   }
-  Serial.println(holdingReg[PC004Speed]);
+  //Serial.println(holdingReg[PC004Speed]);
   return true;
 
 }
@@ -290,7 +290,7 @@ bool mainmodbuscontroller:: ReadAnalogs(uint16_t* holdingReg)
           }
           UpdateSlavemA(TempBuff,holdingReg);
           _AnalogRequest = false;
-          prit("Sucesfull analog Read:\n");
+          //prit("Sucesfull analog Read:\n");
           return true;
         }
       }
@@ -419,11 +419,11 @@ bool mainmodbuscontroller::ReadVFD3(uint16_t* holdingReg)
         else
         {
           Serial.println();
-          Serial.print("Response from VFD3: ");
+          //Serial.print("Response from VFD3: ");
           
           uint16_t in = response.getRegister(0);
           holdingReg[PC004Speed]=in;
-          Serial.println(in);    
+         // Serial.println(in);    
           _readvfd3 = false;
           return true;
         }

@@ -28,8 +28,8 @@ void interlock::startup(uint16_t* raptorholdingReg,int sizeofHoldReg,int* _outpu
 }
 int interlock::CheckInterlocks(uint16_t* raptorholdingReg,int* _outputcontrol,int* _outputstatus)
 {
-  modbus.prit("\n");
-  modbus.prit("Enetring checkinterlocks method\n");
+ // modbus.prit("\n");
+ // modbus.prit("Enetring checkinterlocks method\n");
   //TODO:raptorsync
   bool returnvalue=false;
   float now = millis()+1000;   
@@ -37,12 +37,12 @@ int interlock::CheckInterlocks(uint16_t* raptorholdingReg,int* _outputcontrol,in
     {if(modbus.raptorSync(raptorholdingReg,_outputcontrol,_outputstatus)==true)
     {
       returnvalue= 1;
-      Serial.print("SetPC00x to speed in Raptorsync: ");
+/*       Serial.print("SetPC00x to speed in Raptorsync: ");
       Serial.print(_outputcontrol[PC001],DEC);
       Serial.print(" : ");
       Serial.print(_outputcontrol[PC002],DEC);
       Serial.print(" : ");
-      Serial.println(_outputcontrol[PC004],DEC);
+      Serial.println(_outputcontrol[PC004],DEC); */
       
      // Serial.println("Raptor syinc success");
       }
@@ -63,19 +63,19 @@ else
   Serial.println(raptorholdingReg[Startupfeedback]);
 } */
 //  //
-  Serial.print("SetPC00x to speed before output ctrl: ");
+/*   Serial.print("SetPC00x to speed before output ctrl: ");
       Serial.print(_outputcontrol[PC001],DEC);
       Serial.print(" : ");
       Serial.print(_outputcontrol[PC002],DEC);
       Serial.print(" : ");
-      Serial.println(_outputcontrol[PC004],DEC);
+      Serial.println(_outputcontrol[PC004],DEC); */
   outputs.updateHardwareOutputs(_outputcontrol);
-  Serial.print("SetPC00x to speed after output ctrl: ");
+/*   Serial.print("SetPC00x to speed after output ctrl: ");
       Serial.print(_outputcontrol[PC001],DEC);
       Serial.print(" : ");
       Serial.print(_outputcontrol[PC002],DEC);
       Serial.print(" : ");
-      Serial.println(_outputcontrol[PC004],DEC);
+      Serial.println(_outputcontrol[PC004],DEC); */
   modbus.modbusSync(raptorholdingReg); 
   outputs.updateHardwareInputs(raptorholdingReg);
 
