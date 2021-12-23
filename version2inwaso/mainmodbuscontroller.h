@@ -23,7 +23,7 @@ class mainmodbuscontroller
       mainmodbus(uint16_t* _raptorholdingReg,int _sizeofHoldReg);
       bool raptorStart(uint16_t* _raptorholdingReg,int _sizeofHoldReg);
     
-      bool modbusSync(uint16_t* holdingReg);
+      bool modbusSync(uint16_t holdingReg[]);
       bool ReadInputs(uint16_t* holdingReg);
       bool ReadAnalogs(uint16_t* holdingReg);
       bool WriteOutputs(bool coils[NUM_COILS]);
