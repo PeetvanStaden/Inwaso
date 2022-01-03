@@ -116,7 +116,7 @@ void loop() {
     {
       holdingRegisters[FT006FR]= 0;
     }
-    Serial.print("AT-001 pH Sensor:  ");
+/*     Serial.print("AT-001 pH Sensor:  ");
     Serial.println(holdingRegisters[AT001]);
     Serial.print("AT-002 conductivity sensor:  ");
     Serial.println(holdingRegisters[AT002]);
@@ -152,7 +152,7 @@ void loop() {
     Serial.print("PT-006:  ");
     Serial.println(holdingRegisters[PT006]);
     Serial.print("PT-007:  ");
-    Serial.println(holdingRegisters[PT007]); 
+    Serial.println(holdingRegisters[PT007]);  */
 /*      Serial.print("TT-001:  ");
      Serial.println(holdingRegisters[TT001]);
      Serial.print("TT002:  ");
@@ -209,7 +209,9 @@ void FT001counter(){
   holdingRegisters[FT001]+=bigpulse;
   holdingRegisters[FT001FR]=Flowrate;
   Serial.print("FT101:.... ");
-  Serial.println(Flowrate,DEC);
+  Serial.print(Flowrate,DEC);
+  Serial.print("- Flow total =");
+  Serial.println(bigpulse,DEC);
   if(Flowrate < 1)
   {
     //set pump status;
@@ -225,7 +227,9 @@ void FT002counter(){
   ft02frprv = millis();
   float Flowrate = (60000/ft02fr);
   Serial.print("FT002 ::::::::::::::::::::::::::::::  ");
-  Serial.println(Flowrate,DEC);
+  Serial.print(Flowrate,DEC);
+  Serial.print("- Flow total =");
+  Serial.println(bigpulse,DEC);
   holdingRegisters[FT002]+=bigpulse;
   holdingRegisters[FT002FR]=Flowrate;
 
@@ -244,7 +248,9 @@ void FT003counter(){
   holdingRegisters[FT003]+=bigpulse;
   holdingRegisters[FT003FR]=Flowrate;
   Serial.print("FT303 : ");
-  Serial.println(Flowrate,DEC);
+  Serial.print(Flowrate,DEC);
+  Serial.print("- Flow total =");
+  Serial.println(bigpulse,DEC);
  
 }
 void FT004counter(){
@@ -259,7 +265,9 @@ void FT004counter(){
   holdingRegisters[FT004]+=bigpulse;
   holdingRegisters[FT004FR]=Flowrate;
   Serial.print("FT404 ................");
-  Serial.println(Flowrate,DEC);
+  Serial.print(Flowrate,DEC);
+  Serial.print("- Flow total =");
+  Serial.println(bigpulse,DEC);
  
 }
 void FT005counter(){
@@ -284,7 +292,9 @@ void FT006counter(){
   holdingRegisters[FT006]+=bigpulse;
   holdingRegisters[FT006FR]=Flowrate;
   Serial.println("FT606 ");
-  Serial.println(Flowrate,DEC);
+  Serial.print(Flowrate,DEC);
+  Serial.print("- Flow total =");
+  Serial.println(bigpulse,DEC);
 
 }
 void settimerdefaults(void)
