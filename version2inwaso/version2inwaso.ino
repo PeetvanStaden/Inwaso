@@ -244,7 +244,7 @@ void FT003counter(){
   Serial.print("------ ");
   Serial.println(ft03fr,DEC);
   ft03frprv = millis();
-  float Flowrate = (60000/ft03fr);
+  int Flowrate = (60000/ft03fr);
   holdingRegisters[FT003]+=bigpulse;
   holdingRegisters[FT003FR]=Flowrate;
   Serial.print("FT303 : ");
