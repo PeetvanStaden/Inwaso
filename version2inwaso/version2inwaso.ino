@@ -248,9 +248,8 @@ void FT003counter(){
   holdingRegisters[FT003]+=bigpulse;
   holdingRegisters[FT003FR]=Flowrate;
   Serial.print("FT303 : ");
-  Serial.print(Flowrate,DEC);
-  Serial.print("- Flow total =");
-  Serial.println(bigpulse,DEC);
+  Serial.println(Flowrate);
+  
  
 }
 void FT004counter(){
