@@ -239,6 +239,7 @@ void FT003counter(){
   {
     bitWrite(holdingRegisters[FlowReset],FT003R,0);
     holdingRegisters[FT003] = 0;
+    Serial.println("Resetting flow value of FQT-003");
   }
   ft03fr = millis()-ft03frprv;
   Serial.print("------ ");
