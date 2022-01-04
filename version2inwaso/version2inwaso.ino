@@ -116,6 +116,37 @@ void loop() {
     {
       holdingRegisters[FT006FR]= 0;
     }
+    if(bitRead(holdingRegisters[FlowReset],FT001R))
+    {
+      bitWrite(holdingRegisters[FlowReset],FT001R,0);
+      holdingRegisters[FT001] = 0;
+    }
+    if(bitRead(holdingRegisters[FlowReset],FT002R))
+    {
+      bitWrite(holdingRegisters[FlowReset],FT002R,0);
+      holdingRegisters[FT002] = 0;
+    }
+    if(bitRead(holdingRegisters[FlowReset],FT003R))
+    {
+    bitWrite(holdingRegisters[FlowReset],FT003R,0);
+    holdingRegisters[FT003] = 0;
+    Serial.println("Resetting flow value of FQT-003");
+    }
+    if(bitRead(holdingRegisters[FlowReset],FT004R))
+    {
+      bitWrite(holdingRegisters[FlowReset],FT004R,0);
+      holdingRegisters[FT004] = 0;
+    }
+    if(bitRead(holdingRegisters[FlowReset],FT005R))
+    {
+      bitWrite(holdingRegisters[FlowReset],FT005R,0);
+      holdingRegisters[FT005] = 0;
+    }
+    if(bitRead(holdingRegisters[FlowReset],FT006R))
+    {
+      bitWrite(holdingRegisters[FlowReset],FT006R,0);
+      holdingRegisters[FT006] = 0;
+    }
     Serial.print("AT-001 pH Sensor:  ");
     Serial.println(holdingRegisters[AT001]);
     Serial.print("AT-002 conductivity sensor:  ");
@@ -198,11 +229,7 @@ void loop() {
 }
 
 void FT001counter(){
-  if(bitRead(holdingRegisters[FlowReset],FT001R))
-  {
-    bitWrite(holdingRegisters[FlowReset],FT001R,0);
-    holdingRegisters[FT001] = 0;
-  }
+
   ft01fr = millis()-ft01frprv;
   ft01frprv = millis();
   int Flowrate = (60000/ft01fr);
@@ -218,11 +245,7 @@ void FT001counter(){
   }
 }
 void FT002counter(){
-  if(bitRead(holdingRegisters[FlowReset],FT002R))
-  {
-    bitWrite(holdingRegisters[FlowReset],FT002R,0);
-    holdingRegisters[FT002] = 0;
-  }
+  
   ft02fr = millis()-ft02frprv;
   ft02frprv = millis();
   float Flowrate = (60000/ft02fr);
@@ -235,12 +258,7 @@ void FT002counter(){
 
 }
 void FT003counter(){
-  if(bitRead(holdingRegisters[FlowReset],FT003R))
-  {
-    bitWrite(holdingRegisters[FlowReset],FT003R,0);
-    holdingRegisters[FT003] = 0;
-    Serial.println("Resetting flow value of FQT-003");
-  }
+  
   ft03fr = millis()-ft03frprv;
   Serial.print("------ ");
   Serial.println(ft03fr,DEC);
@@ -254,11 +272,7 @@ void FT003counter(){
  
 }
 void FT004counter(){
-  if(bitRead(holdingRegisters[FlowReset],FT004R))
-  {
-    bitWrite(holdingRegisters[FlowReset],FT004R,0);
-    holdingRegisters[FT004] = 0;
-  }
+  
   ft04fr = millis()-ft04frprv;
   ft04frprv = millis();
   int Flowrate = (60000/ft04fr);
