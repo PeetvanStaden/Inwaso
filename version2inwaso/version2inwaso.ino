@@ -116,7 +116,7 @@ void loop() {
     {
       holdingRegisters[FT006FR]= 0;
     }
-/*     Serial.print("AT-001 pH Sensor:  ");
+    Serial.print("AT-001 pH Sensor:  ");
     Serial.println(holdingRegisters[AT001]);
     Serial.print("AT-002 conductivity sensor:  ");
     Serial.println(holdingRegisters[AT002]);
@@ -130,14 +130,14 @@ void loop() {
     Serial.println(holdingRegisters[AT006]);
     Serial.print("AT-007 conductivity sensor:  ");
     Serial.println(holdingRegisters[AT007]);
-    Serial.print("LT-001 level transmitter:  ");
+/*     Serial.print("LT-001 level transmitter:  ");
     Serial.println(holdingRegisters[LT001]);
     Serial.print("LT-010 level transmitter:  ");
     Serial.println(holdingRegisters[LT010]);
     Serial.print("LT-013 level transmitter:  ");
     Serial.println(holdingRegisters[LT013]);
     Serial.print("LT-016 level transmitter:  ");
-    Serial.println(holdingRegisters[LT016]);
+    Serial.println(holdingRegisters[LT016]); */
 
     Serial.print("PT-001:  ");
     Serial.println(holdingRegisters[PT001]);
@@ -152,7 +152,7 @@ void loop() {
     Serial.print("PT-006:  ");
     Serial.println(holdingRegisters[PT006]);
     Serial.print("PT-007:  ");
-    Serial.println(holdingRegisters[PT007]);  */
+    Serial.println(holdingRegisters[PT007]); 
 /*      Serial.print("TT-001:  ");
      Serial.println(holdingRegisters[TT001]);
      Serial.print("TT002:  ");
