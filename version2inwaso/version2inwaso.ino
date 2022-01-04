@@ -147,6 +147,8 @@ void loop() {
       bitWrite(holdingRegisters[FlowReset],FT006R,0);
       holdingRegisters[FT006] = 0;
     }
+    Serial.print("Flow Reset Value:  ");
+    Serial.println(holdingRegisters[FlowReset]);
     Serial.print("AT-001 pH Sensor:  ");
     Serial.println(holdingRegisters[AT001]);
     Serial.print("AT-002 conductivity sensor:  ");
