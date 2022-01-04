@@ -118,33 +118,33 @@ void loop() {
     }
     if(bitRead(holdingRegisters[FlowReset],FT001R))
     {
-      bitWrite(holdingRegisters[FlowReset],FT001R,0);
+     // bitWrite(holdingRegisters[FlowReset],FT001R,0);
       holdingRegisters[FT001] = 0;
     }
     if(bitRead(holdingRegisters[FlowReset],FT002R))
     {
-      bitWrite(holdingRegisters[FlowReset],FT002R,0);
+     // bitWrite(holdingRegisters[FlowReset],FT002R,0);
       holdingRegisters[FT002] = 0;
     }
     if(bitRead(holdingRegisters[FlowReset],FT003R))
     {
-    bitWrite(holdingRegisters[FlowReset],FT003R,0);
+    //bitWrite(holdingRegisters[FlowReset],FT003R,0);
     holdingRegisters[FT003] = 0;
     Serial.println("Resetting flow value of FQT-003");
     }
     if(bitRead(holdingRegisters[FlowReset],FT004R))
     {
-      bitWrite(holdingRegisters[FlowReset],FT004R,0);
+      //bitWrite(holdingRegisters[FlowReset],FT004R,0);
       holdingRegisters[FT004] = 0;
     }
     if(bitRead(holdingRegisters[FlowReset],FT005R))
     {
-      bitWrite(holdingRegisters[FlowReset],FT005R,0);
+      //bitWrite(holdingRegisters[FlowReset],FT005R,0);
       holdingRegisters[FT005] = 0;
     }
     if(bitRead(holdingRegisters[FlowReset],FT006R))
     {
-      bitWrite(holdingRegisters[FlowReset],FT006R,0);
+     // bitWrite(holdingRegisters[FlowReset],FT006R,0);
       holdingRegisters[FT006] = 0;
     }
     Serial.print("Flow Reset Value:  ");
