@@ -74,8 +74,8 @@ prit("\n");
   testINT4(_raptorholdingReg,_outputctrl);
   //testINT7(_raptorholdingReg,_outputctrl);
  // testINT8(_raptorholdingReg,_outputctrl);
- // testINT26(_raptorholdingReg,_outputctrl);
- // testINT27(_raptorholdingReg,_outputctrl);
+  testINT26(_raptorholdingReg,_outputctrl);
+  testINT27(_raptorholdingReg,_outputctrl);
   testINT28(_raptorholdingReg,_outputctrl);
   testINT29(_raptorholdingReg,_outputctrl);
 //  testLT016(_raptorholdingReg,_outputctrl);
@@ -1463,80 +1463,48 @@ void mainmodbuscontroller::testINT8(uint16_t* raptorholdingReg,int* _outputcontr
 }
 void mainmodbuscontroller::testINT26(uint16_t* raptorholdingReg,int* _outputcontrol)
 {
-if(raptorholdingReg[AT004ABC]>raptorholdingReg[AT004ABC+HAlarmOffset])
-    {
-      if(AT004ABC>15)
-      {
-        bitWrite(raptorholdingReg[AlarmH2],AT004ABC-16,1);
-        bitWrite(raptorholdingReg[AlarmHH2],AT004ABC-16,0);
-        bitWrite(raptorholdingReg[ExtrasControl],VER002ctrl,0);
-        bitWrite(raptorholdingReg[ExtrasControl],VER001ctrl,0);
-        bitWrite(raptorholdingReg[InterlockB],INT26,1); 
-        prit("INTERLOCK: INT26 active \n"); 
-        for(int i = 0; i<26; i++)
-        {
-          _outputcontrol[i]=0;
-        }
+if(raptorholdingReg[AT004ABC]>0)
+ {
 
-
-      }
-      else
-      {
-        bitWrite(raptorholdingReg[AlarmH1],AT004ABC,1);
-        bitWrite(raptorholdingReg[AlarmHH1],AT004ABC,0);
-        bitWrite(raptorholdingReg[ExtrasControl],VER002ctrl,0);
-        bitWrite(raptorholdingReg[ExtrasControl],VER001ctrl,0);
-        bitWrite(raptorholdingReg[InterlockB],INT26,1); 
-        prit("INTERLOCK: INT26 active \n"); 
-        for(int i = 0; i<26; i++)
-        {
-          _outputcontrol[i]=0;
-        }
-
-      }
-      
-    }
-    else
-    {
-      bitWrite(raptorholdingReg[InterlockB],INT26,0);
-    }
+  bitWrite(raptorholdingReg[AlarmH2],AT004ABC-16,1);
+  bitWrite(raptorholdingReg[AlarmHH2],AT004ABC-16,0);
+  bitWrite(raptorholdingReg[ExtrasControl],VER002ctrl,0);
+  bitWrite(raptorholdingReg[ExtrasControl],VER001ctrl,0);
+  bitWrite(raptorholdingReg[InterlockB],INT26,1); 
+  prit("INTERLOCK: INT26 active \n"); 
+  for(int i = 0; i<26; i++)
+  {
+    _outputcontrol[i]=0;
+  }
+  StopVFD1();
+  StopVFD2();
+  StopVFD3();
+}
+else
+{
+  bitWrite(raptorholdingReg[InterlockB],INT26,0);
+}
 
 }
 void mainmodbuscontroller::testINT27(uint16_t* raptorholdingReg,int* _outputcontrol)
 {
-if(raptorholdingReg[AT005ABC]>raptorholdingReg[AT005ABC+HAlarmOffset])
+if(raptorholdingReg[AT005ABC]>0)
+{
+
+    bitWrite(raptorholdingReg[AlarmH2],AT005ABC-16,1);
+    bitWrite(raptorholdingReg[AlarmHH2],AT005ABC-16,0);
+    bitWrite(raptorholdingReg[ExtrasControl],VER002ctrl,0);
+    bitWrite(raptorholdingReg[ExtrasControl],VER001ctrl,0);
+    bitWrite(raptorholdingReg[InterlockB],INT27,1); 
+    prit("INTERLOCK: INT27 active \n"); 
+    for(int i = 0; i<26; i++)
     {
-      if(AT005ABC>15)
-      {
-        bitWrite(raptorholdingReg[AlarmH2],AT005ABC-16,1);
-        bitWrite(raptorholdingReg[AlarmHH2],AT005ABC-16,0);
-        bitWrite(raptorholdingReg[ExtrasControl],VER002ctrl,0);
-        bitWrite(raptorholdingReg[ExtrasControl],VER001ctrl,0);
-        bitWrite(raptorholdingReg[InterlockB],INT27,1); 
-        prit("INTERLOCK: INT27 active \n"); 
-        for(int i = 0; i<26; i++)
-        {
-          _outputcontrol[i]=0;
-        }
-
-
-      }
-      else
-      {
-        bitWrite(raptorholdingReg[AlarmH1],AT005ABC,1);
-        bitWrite(raptorholdingReg[AlarmHH1],AT005ABC,0);
-        bitWrite(raptorholdingReg[ExtrasControl],VER002ctrl,0);
-        bitWrite(raptorholdingReg[ExtrasControl],VER001ctrl,0);
-        bitWrite(raptorholdingReg[InterlockB],INT27,1); 
-        prit("INTERLOCK: INT27 active \n"); 
-        for(int i = 0; i<26; i++)
-        {
-          _outputcontrol[i]=0;
-        }
-
-      }
-      
+      _outputcontrol[i]=0;
     }
+    StopVFD1();
+    StopVFD2();
+    StopVFD3();
+}
     else
     {
       bitWrite(raptorholdingReg[InterlockA],INT27,0);
