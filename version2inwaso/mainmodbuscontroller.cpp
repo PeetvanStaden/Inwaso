@@ -66,27 +66,27 @@ prit("\n");
 /*copying from interlock cpp*/
  // testLT001(raptorholdingReg,_outputctrl);
   
-  testINT1(_raptorholdingReg,_outputctrl);
-  testINT2(_raptorholdingReg,_outputctrl);
+ //// testINT1(_raptorholdingReg,_outputctrl);
+ //// testINT2(_raptorholdingReg,_outputctrl);
  // testAT001(_raptorholdingReg,_outputctrl);
  // testINT36(_raptorholdingReg,_outputctrl);
-  testINT3(_raptorholdingReg,_outputctrl);
-  testINT4(_raptorholdingReg,_outputctrl);
+ //// testINT3(_raptorholdingReg,_outputctrl);
+ //// testINT4(_raptorholdingReg,_outputctrl);
   //testINT7(_raptorholdingReg,_outputctrl);
  // testINT8(_raptorholdingReg,_outputctrl);
  // testINT26(_raptorholdingReg,_outputctrl);
 //  testINT27(_raptorholdingReg,_outputctrl);
-  testINT28(_raptorholdingReg,_outputctrl);
-  testINT29(_raptorholdingReg,_outputctrl);
+ //// testINT28(_raptorholdingReg,_outputctrl);
+////  testINT29(_raptorholdingReg,_outputctrl);
 //  testLT016(_raptorholdingReg,_outputctrl);
 //  testAT006(_raptorholdingReg,_outputctrl);
-  testINT34(_raptorholdingReg,_outputctrl);
-  testINT35(_raptorholdingReg,_outputctrl);
+////  testINT34(_raptorholdingReg,_outputctrl);
+////  testINT35(_raptorholdingReg,_outputctrl);
 //  testLT010(_raptorholdingReg,_outputctrl);
-  testINT30(_raptorholdingReg,_outputctrl);
-  testINT31(_raptorholdingReg,_outputctrl);
-  testINT32(_raptorholdingReg,_outputctrl);
-  testINT33(_raptorholdingReg,_outputctrl);
+////  testINT30(_raptorholdingReg,_outputctrl);
+////  testINT31(_raptorholdingReg,_outputctrl);
+////  testINT32(_raptorholdingReg,_outputctrl);
+////  testINT33(_raptorholdingReg,_outputctrl);
 //  testLT013(raptorholdingReg,_outputctrl);
 
  /*this was the already implemented part*/ 
